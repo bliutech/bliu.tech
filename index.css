@@ -10,7 +10,7 @@ button {
 }
 
 button::before {
- content: 'Button';
+ content: 'LinkedIn';
  /*Button's value/text-content */
  position: absolute;
  top: -14%;
