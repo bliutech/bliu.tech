@@ -7,6 +7,7 @@ button {
     color: white;
     position: relative;
     letter-spacing: 1px;
+    border-radius: 4px;
 }
 
 button::before {
@@ -24,6 +25,7 @@ button::before {
  justify-content: center;
  transition: 0.15s ease-in-out;
  font-weight: bold;
+ border-radius: 4px;
 }
 
 button:hover::before {
@@ -42,4 +44,15 @@ img {
     left: 7%;
     color: white;
     display: flex;
+    border-radius: 8px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    margin: auto;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }

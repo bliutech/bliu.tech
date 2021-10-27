@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title> Benson Liu's Tech Website </title>
-    <link rel="shortcut icon" type="image/jpg" href="files/gears.jpg"/>
     <head>
+        <title> Benson Liu's Tech Website </title>
+        <link rel="shortcut icon" type="image/jpg" href="files/gears.jpg"/>
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
-        <img src="files/bliu_headshot.jpg" alt="Benson Liu Headshot" width="150" height="175">
+        <div align="center">
+            <h1> Benson Liu's Tech Website</h1>
+        </div>
+        <div align="center">
+            <img src="files/bliu_headshot.jpg" alt="Benson Liu Headshot" width="150" height="175">
+        </div>
         <br>
-        <img src="files\bliu-engineering-ucla.jpg" alt="Benson Liu Headshot" width="200" height="175">
-        <p>Welcome to bliu.tech, the tech website for Benson Liu! Feel free to learn more about Benson including current and past projects, hobbies, and interests!</p>
-        <br>
-        <h2>More About Me!</h2>
-        <button onclick="location.href='https://www.linkedin.com/in/bliutech/';" content="LinkedIn">LinkedIn Redirect</button>
-        <br>
-        <br>
-        <button onclick="location.href='https://github.com/bliutech';" content="GitHub">GitHub Redirect</button>
-        <br>
-        <br>
-        <button onclick="location.href='https://www.youtube.com/channel/UC8uLQ2PAZ_d-W_hxTtrthbA';" content="YouTube">GitHub Redirect</button>
+        <div align="center">
+            <img src="files\bliu-engineering-ucla.jpg" alt="Benson Liu Headshot" width="200" height="175">
+        </div>
+        
+        <p>Welcome to bliu.tech, the tech website for Benson Liu! Feel free to learn more about Benson including current and past projects, hobbies, and interests!</p>       
+        
+        <table class="center">
+            <colgroup width="40%"></colgroup>
+            <colgroup width="40%"></colgroup>
+            <colgroup width="40%"></colgroup>
+            <tbody>
+                <tr>
+                    <td>
+                        <button onclick="location.href='#about-me';" content="About Me">About Me Redirect</button>
+                    </td>
+                    <td>
+                        <button onclick="location.href='#projects';" content="Projects">Projects Redirect</button>
+                    </td>
+                    <td>
+                        <button onclick="location.href='#cv';" content="CV">CV Redirect</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
         
         <hr>
 
+        <a id="about-me"></a>
         <h2>About Me</h4>
             <p>
                 I am currently a computer science study at the Samueli School of Engineering at UCLA.<br>
@@ -41,13 +60,36 @@
             <li>chess</li>
         </ul>
         
+        <br>
+        <h2>More About Me!</h2>
+        <table class="center">
+            <colgroup width="40%"></colgroup>
+            <colgroup width="40%"></colgroup>
+            <colgroup width="40%"></colgroup>
+            <tbody>
+                <tr>
+                    <td>
+                        <button onclick="location.href='https://www.linkedin.com/in/bliutech/';" content="LinkedIn">LinkedIn Redirect</button>
+                    </td>
+                    <td>
+                        <button onclick="location.href='https://github.com/bliutech';" content="GitHub">GitHub Redirect</button>
+                    </td>
+                    <td>
+                        <button onclick="location.href='https://www.youtube.com/channel/UC8uLQ2PAZ_d-W_hxTtrthbA';" content="YouTube">GitHub Redirect</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+
         <hr>
         
+        <a id="projects"></a>
         <h2>Projects</h2>
         <p>Shhhhh... I have some projects in the works at the moment. This section will be updated with things very soon!</p>
 
         <hr>
 
+        <a id="cv"></a>
         <h2>CV</h2>
         <p>For anyone interested in my extended experience, here are some more details about me.</p>
         <h4>Professional Experience</h4>
