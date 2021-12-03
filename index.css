@@ -8,10 +8,18 @@ body  {
     background-size: cover;
     background-blend-mode: saturation;
     font-family: 'Westwood Sans', sans-serif;
+    padding-left: 20%;
+    padding-right: 20%;
 }
+
+hr {
+    border: 3px dashed black;
+    border-radius: 5px;
+}
+
 .section {
     background-color:rgba(255, 255, 255, 0.66);
-    padding: 10px;
+    padding: 3%;
     border: 2px solid black;
     border-radius: 4px;
 }
