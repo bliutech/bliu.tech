@@ -3,9 +3,16 @@
     <head>
 
     </head>
-    <body>
+    <body onload='location.replace("https://www.bliu.tech")'>
         <h1>links.bliu.tech</h1>
         <p>A small project involving using the bliu.tech domain as a link shortener.</p>
         <p>The subdomain "links.bliu.tech" is reserved for redirect pages to act as link shorteners.</p>
+        <button onclick="myFunction()">Replace document</button>
+
+        <script>
+        function myFunction() {
+        location.replace("https://www.w3schools.com")
+        }
+        </script>
     </body>
 </html>
