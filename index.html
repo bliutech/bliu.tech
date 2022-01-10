@@ -2,112 +2,59 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SEO metadata -->
         <meta name="description" content="Learn more about Benson Liu, a first year computer science student at UCLA passionate about technology, chess, and education!">
         <title class> Benson Liu's Tech Website </title>
         <link rel="shortcut icon" type="image/jpg" href="files/gears.jpg"/>
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
-        <div style="text-align:center">
-            <h1 class = "section"> Benson Liu's Tech Website</h1>
+        <!-- Navigation Bar -->
+        <ul id="nav-bar">
+            <li><img src="files/svg/gear-thin.svg" id="logo-img"></li>
+            <li id="logo-text" style="vertical-align: middle;"> bliu.tech </li>
+            <li> About </li>
+            <li> Projects </li>
+            <li> Experience </li>
+        </ul>
+
+        <!-- Home Page Content -->
+        <div class="top">
+            <div class="box-left">
+                <img src= "files/bliu-engineering-ucla.jpg" alt="Benson in front of the Henry Samueli School of Engineering & Applied Science at UCLA">
+            </div>
+            <div class="box-right">
+                <h1> My name is Benson Liu </h1>
+                <ul>
+                    <li> Student </li>
+                    <li> Software Engineer </li>
+                    <li> Learner </li>
+                </ul>
+                <p><strong>Currently:</strong> CS @ <a href="https://www.ucla.edu">UCLA</a> | Cyber Intern @ <a href="https://www.uclaacm.com">ACM at UCLA</a></p>
+            </div>
         </div>
 
-        <div class="center">
-            <img src="files\bliu-engineering-ucla.jpg" alt="Benson Liu Headshot" width=75%>
+        <!-- Footer -->
+        <div>
+            <hr>
+            <div class="box-left">
+                <p>See any problems or have suggestions?</p>
+                <p>Want to get in touch?</p>
+            </div>
+            <div class="box-left">
+                <p style="text-align:center;"><strong>Contact Me</strong></p>
+                <ul>
+                    <li><a href="mailto:bensonhliu@gmail.com">bensonhliu@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/bliu.tech">linkedin.com/in/bliutech</a></li>
+                    <li><a href="htps://www.github.com/bliutech">github.com/bliutech</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div>
+                <p><a href="https://www.bliu.tech"></a> is hosted on <a href="https://www.github.com/bliutech/bliu.tech">GitHub Pages</a></p>
+                <img src="files/svg/github.svg">
+                <p>%copy; Benson Liu 2021</p>
+            </div>
         </div>
-        
-        <br>
-        <div class = "section">
-            <p>Welcome to bliu.tech, the tech website for Benson! Feel free to learn more about Benson including current and past projects, hobbies, and interests!</p>
-        </div>       
-        <br>
-        <table class="center">
-            <colgroup width="40%"></colgroup>
-            <colgroup width="40%"></colgroup>
-            <colgroup width="40%"></colgroup>
-            <tbody>
-                <tr>
-                    <td>
-                        <button onclick="location.href='#about-me';" content="About Me">About Me Redirect</button>
-                    </td>
-                    <td>
-                        <button onclick="location.href='#projects';" content="Projects">Projects Redirect</button>
-                    </td>
-                    <td>
-                        <button onclick="location.href='#cv';" content="CV">CV Redirect</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table> 
-        
-        <hr>
-
-        <div class = "section">
-            <a id="about-me"></a>
-            <h2>About Me</h4>
-                <p>
-                    Hi! I'm Benson Liu! <br>
-                    I am currently a computer science study at the Samueli School of Engineering at UCLA.<br>
-                    I am exploring my interest in technology but right now I am passionate about software development and data science.
-                </p>
-
-            <h5>Clubs:</h5>
-            <ul>
-                <li>UCLA Mock Trial</li>
-                <li>ACM @ UCLA</li>
-                <li>UCLA Chess Club</li>
-            </ul>
-
-            <h5>Hobbies:</h5>
-            <ul>
-                <li>piano</li>
-                <li>chess</li>
-            </ul>
-            
-            <br>
-        </div>
-
-        <h2 class = "section">More About Me!</h2>
-        <table class="center">
-            <colgroup width="40%"></colgroup>
-            <colgroup width="40%"></colgroup>
-            <colgroup width="40%"></colgroup>
-            <tbody>
-                <tr>
-                    <td>
-                        <button onclick="location.href='https://www.linkedin.com/in/bliutech/';" content="LinkedIn">LinkedIn Redirect</button>
-                    </td>
-                    <td>
-                        <button onclick="location.href='https://github.com/bliutech';" content="GitHub">GitHub Redirect</button>
-                    </td>
-                    <td>
-                        <button onclick="location.href='https://www.youtube.com/channel/UC8uLQ2PAZ_d-W_hxTtrthbA';" content="YouTube">YouTube Redirect</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <hr>
-        
-        <div class = "section">
-            <a id="projects"></a>
-            <h2>Projects</h2>
-            <p>
-                Shhhhh... I have some projects in the works at the moment. This section will be updated with things very soon!
-                <br>
-                Please check my GitHub for a more up to date version of my current projects. This section will be updated more later.
-            </p>
-        </div>
-
-        <hr>
-
-        <div class = "section">
-            <a id="cv"></a>
-            <h2>CV</h2>
-            <p>For anyone interested in my extended experience, here are some more details about me.</p>
-            <h4>Professional Experience</h4>
-            <p>Please check out my LinkedIn for a more up to date version of my current experience. This section will be updated more later.</p>
-        </div>
-
     </body>
 </html>
