@@ -9,7 +9,7 @@
 
 /* Navigation Bar */
 
-#nav-bar {
+#nav-bar ul {
     position: fixed;
     width: 100%;
     height: 4rem;
@@ -24,7 +24,7 @@
 }
 
   
-#nav-bar li a {
+#nav-bar ul li a {
     float: right;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
@@ -36,11 +36,11 @@
     text-decoration: none;
 }
 
-#nav-bar li a:hover {
+#nav-bar ul li a:hover {
     color: rgb(255, 0, 0);
 }
 
-#logo-text {
+#logo-text ul li a {
     float: left;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
