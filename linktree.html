@@ -4,10 +4,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title class> Linktree | bliu.tech </title>
         <link rel="shortcut icon" type="image/jpg" href="files/gears.jpg"/>
-        <link rel="stylesheet" href="index.css" />
+        <!-- <link rel="stylesheet" href="index.css" /> -->
         <style>
+            body {
+                position: static;
+                font-family: 'Poppins', sans-serif;
+            }
+            h1 {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+            }
+
+            p {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+            }
             button {
                 margin:0 auto;
+                padding: 5px;
                 display:block;
                 width: 50%;
                 height: 50%;
@@ -18,44 +32,58 @@
             img {
                 border-radius: 50%;
             }
+            hr
+            {
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 3%;
+                margin-bottom: 3%;
+                height: 3px;
+                background-color: red;
+                border-radius: 20px;
+                border: none;
+            }
         </style>
     </head>
     <body>
-        <div style="text-align:center" class="section">
-            <h3>@am_i_bliu Linktree</h3>
-        </div>
-        <br>
-        <div class="center">
-            <img src="files\bliu_headshot.jpg" alt="Benson Liu Headshot" width="25%" height="25%">
-        </div>
-        <br>
-        <div style="text-align:center" class="section center">
-            <h3>General</h3>
-        </div>
-        <br>
-        <button onclick="location.href='https://www.bliu.tech/';" content="Personal Website">Website Redirect</button>
-        <br>
-        <button onclick="location.href='https://www.linkedin.com/in/bliutech/';" content="LinkedIn Profile">LinkedIn Redirect</button>
-        <br>
-        <button onclick="location.href='https://github.com/bliutech';" content="GitHub Profile (bliutech)">GitHub Redirect</button>
-        <br>
-        <div style="text-align:center" class="section center">
-            <h3>Socials</h3>
-        </div>
-        <br>
-        <button onclick="location.href='https://www.instagram.com/am_i_bliu/';" content="Instagram Profile (@am_i_bliu)">Instagram Redirect</button>
-        <br>
-        <button onclick="location.href='https://www.youtube.com/channel/UC8uLQ2PAZ_d-W_hxTtrthbA';" content="YouTube Channel (Benson Liu)">YouTube Redirect</button>
-        <br>
-        <button onclick="location.href='https://www.facebook.com/bensonhliu/';" content="Facebook Profile">Facebook Redirect</button>
-        <br>
-        <div style="text-align:center" class="section center">
-            <h3>Chess</h3>
-        </div>
+        <div style="margin-bottom: 5%;">
+            <div style="text-align:center" class="section">
+                <h3>@am_i_bliu Linktree</h3>
+            </div>
             <br>
-            <button onclick="location.href='https://lichess.org/@/BenBenfuzzy';" content="Lichess Profile">Lichess Redirect</button>
+            <div>
+                <img src="files\bliu_headshot.jpg" alt="Benson Liu Headshot" width="10%" style="margin-left: 45%; margin-right: 45;">
+            </div>
+            <hr>
+            <div style="text-align:center" class="section">
+                <h3>General</h3>
+            </div>
             <br>
-            <button onclick="location.href='https://www.chess.com/member/benbenfuzzy';" content="Chess.com Profile">Chess.com Redirect</button>
+            <button onclick="location.href='https://www.bliu.tech/';" content="Personal Website">Personal Website</button>
+            <br>
+            <button onclick="location.href='https://www.linkedin.com/in/bliutech/';" content="LinkedIn Profile">LinkedIn</button>
+            <br>
+            <button onclick="location.href='https://github.com/bliutech';" content="GitHub Profile (bliutech)">GitHub</button>
+            <hr>
+            <div style="text-align:center" class="section">
+                <h3>Socials</h3>
+            </div>
+            <br>
+            <button onclick="location.href='https://www.instagram.com/am_i_bliu/';" content="Instagram Profile (@am_i_bliu)">Instagram</button>
+            <br>
+            <button onclick="location.href='https://www.youtube.com/channel/UC8uLQ2PAZ_d-W_hxTtrthbA';" content="YouTube Channel (Benson Liu)">YouTube</button>
+            <br>
+            <button onclick="location.href='https://www.facebook.com/bensonhliu/';" content="Facebook Profile">Facebook</button>
+            <hr>
+            <div style="text-align:center" class="section">
+                <h3>Chess</h3>
+            </div>
+                <br>
+                <button onclick="location.href='https://lichess.org/@/BenBenfuzzy';" content="Lichess Profile">Lichess</button>
+                <br>
+                <button onclick="location.href='https://www.chess.com/member/benbenfuzzy';" content="Chess.com Profile">Chess.com</button>
+            </div>
+            <hr>
         </div>
     </body>
 </html>
