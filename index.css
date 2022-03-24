@@ -92,6 +92,10 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+a {
+    cursor: pointer;
+}
+
 .top {
     margin-top: 4rem;
     position: static;
