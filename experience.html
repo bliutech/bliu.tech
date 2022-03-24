@@ -18,12 +18,59 @@
 
         <br>
         <!-- Experience Page Content -->
-        <div class="content top">
+        <div class="top" style="margin-left: 20%; margin-right: 20%; margin-bottom: 10%;">
             <h1> Experience  </h1>
             <p>  My professional experience page is being worked on at the moment. Check out my LinkedIn in the meanwhile. </p>
+            <p> If you only want some highlights of my experience, here is my resume. </p>
+            <img src="files/svg/document-thin.svg" style="width: 10%;">
+
             <!-- Focus on Professional Work experience first -->
+            <h2> Professional Experience </h2>
+            <h3> ACM @ UCLA </h3>
+            <a id="toggler" onclick="myFunction('toggled', 'toggler')"><p>Show more.</p></a>
+            <div id="toggled"></div>
+
+            <h3> Liu U: Tutoring Services </h3>
+            <a id="toggler2" onclick="myFunction('toggled2', 'toggler2')"><p>Show more.</p></a>
+            <div id="toggled2"></div>
+
+            <h3> New Jersey Govenor's School of Engineering & Technology </h3>
+            <a id="toggler3" onclick="myFunction('toggled3', 'toggler3')"><p>Show more.</p></a>
+            <div id="toggled3"></div>
+
+            <hr>
             <!-- Add education and volunteer work second -->
+            <h2> Education </h2>
+
+            <h3> University of California, Los Angeles </h3>
+            <a id="extra-click" onclick="myFunction('extra', 'extra-click')"><p>Show more.</p></a>
+            <div id="extra"></div>
+            <h3> Morristown High School </h3>
+            <a id="extra-click2" onclick="myFunction('extra2', 'extra-click2')"><p>Show more.</p></a>
+            <div id="extra2"></div>
+
+            <hr>
+
+            <h2>Developer Experience</h2>
+            <p> I contribute to many projects on GitHub. Here is some of my recent contributions. </p>
+            <script src="https://rss.bloople.net/?url=https%3A%2F%2Fwww.github.com%2Fbliutech.atom&limit=10&showtitle=false&type=js"></script>
+
         </div>
+
+        <script>
+            function myFunction(id1, id2) {
+              var element = document.getElementById(id1);
+              var toggler = document.getElementById(id2);
+              if (element.innerHTML === "") {
+                element.innerHTML = "<p>Extra text!</p>";
+                toggler.innerHTML = "<p>Show less.</p>"
+              }
+              else {
+                element.innerHTML = "";
+                toggler.innerHTML = "<p>Show more.</p>"
+              }
+            }
+        </script>
 
         <!-- Footer -->
         <div id="footer">
