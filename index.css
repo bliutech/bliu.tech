@@ -136,6 +136,10 @@ a {
     justify-content: space-evenly;
 }
 
+.project-wrapper {
+    width: 100%;
+}
+
 .project-card p {
     max-width: 100%;
     overflow-wrap: break-word;
@@ -150,13 +154,13 @@ a {
     margin: 0.5rem 0;
 }
 
-.project-card > .project-left {
+.project-wrapper > .project-left {
     flex-grow: 1;
     float: left;
     max-width: 450px;
 }
 
-.project-card > .project-right {
+.project-wrapper > .project-right {
     flex-grow: 1;
     float: right;
     text-align: right;
@@ -177,6 +181,10 @@ a {
     justify-content: space-evenly;
 }
 
+.experience-wrapper {
+    width: 100%;
+}
+
 .experience-card > p {
     max-width: 100%;
     width: 100%;
@@ -192,17 +200,17 @@ a {
     margin: 0.5rem 0;
 }
 
-.experience-card > .experience-left {
+.experience-wrapper > .experience-left {
     flex-grow: 1;
     float: left;
-    max-width: 450px;
+    max-width: 600px;
 }
 
-.experience-card > .experience-right {
+.experience-wrapper > .experience-right {
     flex-grow: 1;
     float: right;
     text-align: right;
-    max-width: 450px;
+    max-width: 600px;
 }
 
 /* ======================================================================================================================== */

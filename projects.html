@@ -27,31 +27,60 @@
 
         <!-- Projects Page Content -->
         <div class="content top">
-            <h1> Projects </h1>
-            <p> Shhhhh... I have some projects in the works at the moment. This section will be updated with things very soon!
-                Please check my GitHub for a more up to date version of my current projects. This section will be updated more later. </p>
+            <h1> 🛠 Projects </h1>
+            <p> Here are some of the projects I have worked on in the past. For a more up to date information on what I am working on, be sure to checkout my <a href="https://www.github.com/bliutech">GitHub</a>. </p>
 
             
-            <!-- <div class="project-card">
-                <div class="project-left">
-                    <p><strong> 📕 Project Title </strong></p>
-                    <p><i>Frameworks Used</i></p>
-                </div>
-                <div class="project-right">
-                    <p><i>Project Date</i></p>
-                    <p><a href="">Project Link</a></p>
+            <!--
+            <div class="project-card">
+                <div class="project-wrapper">
+                    <div class="project-left">
+                        <p><strong> 📕 Project Title </strong></p>
+                        <p><i>Frameworks Used</i></p>
+                    </div>
+                    <div class="project-right">
+                        <p><i>Project Date</i></p>
+                        <p><a href="">Project Link</a></p>
+                    </div>
                 </div>
                 <p> Lorem ipsum ... </p>
             </div> -->
+
+            <div class="project-card">
+                <div class="project-wrapper">
+                    <div class="project-left">
+                        <p><strong> 💻 NLP-based Malware Detection of PDFs </strong></p>
+                        <p><i> Natural Language Processing, Transformers, Python </i></p>
+                    </div>
+                    <div class="project-right">
+                        <p><i>November - December 2022</i></p>
+                        <p><a href="https://github.com/bliutech/nlp-pdf-malware-detection">github.com/bliutech/nlp-pdf-malware-detection</a></p>
+                    </div>
+                </div>
+                <p> 
+                    The threat presented by malware hidden in Portable Document Formats (PDFs) is a serious issue to the average Internet user,
+                    with the ability of a PDF to execute purposefully-embedded JavaScript serving as a method of obscuring malicious scripts and data.
+                    While there are several existing Machine Learning-based models designed for PDF malware detection, the usage of transformers to
+                    statically analyze PDFs for malware has not yet been explored. Due to their attention mechanisms and ability to process data in parallel,
+                    transformers hold great potential for analyzing large quantities of data in detail without being excessively computationally demanding.
+                    By preprocessing PDFs as byte strings, generating meaningful word embeddings using one-hot encoding and variable n-grams, and feeding
+                    these results to a fine-tuned transformer model, we have produced a model that classifies a testing set of PDFs as malicious or benign
+                    with 96.67% accuracy. After evaluating the performance of our model, we can note that this is a feasible method of performing robust
+                    static analysis on PDF files. However, it is important to continue refining the current model and exploring additional methods of
+                    improving the accuracy and precision of the model on a varied dataset.
+                </p>
+            </div>
             
             <div class="project-card">
-                <div class="project-left">
-                    <p><strong> 📕 Wikisafe </strong></p>
-                    <p><i>React.js, Python Flask, Solidity (ethereum)</i></p>
-                </div>
-                <div class="project-right">
-                    <p><i>October 2022</i></p>
-                    <p><a href="https://github.com/bliutech/wikisafe">github.com/bliutech/wikisafe</a></p>
+                <div class="project-wrapper">
+                    <div class="project-left">
+                        <p><strong> 📕 Wikisafe </strong></p>
+                        <p><i>React.js, Flask, Solidity (Ethereum) </i></p>
+                    </div>
+                    <div class="project-right">
+                        <p><i>October 2022</i></p>
+                        <p><a href="https://github.com/bliutech/wikisafe">github.com/bliutech/wikisafe</a></p>
+                    </div>
                 </div>
                 <p> 
                     Wikisafe is a revolutionary new crowdsourcing web application that innovates the process of crowdsourcing information.
@@ -65,22 +94,74 @@
             </div>
 
             <div class="project-card">
-                <div class="project-left">
-                    <p><strong> ♻️ Recycling Elevated (Re) </strong></p>
-                    <p><i>Frameworks Used</i></p>
-                </div>
-                <div class="project-right">
-                    <p><i>Project Date</i></p>
-                    <p><a href="https://github.com/bliutech/re"> github.com/bliutech/re </a></p>
+                <div class="project-wrapper">
+                    <div class="project-left">
+                        <p><strong> ♻️ Recycling Elevated (Re) </strong></p>
+                        <p><i>React.js, Flask, PyTorch, Computer Vision</i></p>
+                    </div>
+                    <div class="project-right">
+                        <p><i>April 2022</i></p>
+                        <p><a href="https://github.com/bliutech/re"> github.com/bliutech/re </a></p>
+                    </div>
                 </div>
                 <p> 
-                    Wikisafe is a revolutionary new crowdsourcing web application that innovates the process of crowdsourcing information.
-                    This application leverages the Ethereum blockchain to validate contributions to crowdsourced articles and prevents
-                    vandalism to these vital resources. Additionally, Wikisafe provides several fidelity machine learning models that
-                    seek to improve the overall contributor experience through automating parts of the process such as summarization,
-                    captioning, and figure generation. Contributors can start simply by signing up for an account and begin contributing
-                    and utilizing the features. Communities are able to collectively share knowledge and improve free and accessible education
-                    globally around the world with incredible ease, security, and quality!
+                    Ever finish your cup of boba and wonder, can I recycle this or not? Introducing Re, an interactive web app that lets you take
+                    a photo of your trash and tells you which bin it belongs to! To begin, register an account on the site, and start taking photos!
+                    Re tracks the number of trash items you have scanned, and it features a global leaderboard of users who scan the most trash.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-wrapper">
+                    <div class="project-left">
+                        <p><strong> ✔️ RendeYou </strong></p>
+                        <p><i>React.js, Express.js, MongoDB </i></p>
+                    </div>
+                    <div class="project-right">
+                        <p><i>January - March 2022</i></p>
+                        <p><a href="https://github.com/bliutech/RendeYou"> github.com/bliutech/RendeYou </a></p>
+                    </div>
+                </div>
+                <p> 
+                    RendeYou is a MERN Stack full stack web application that connects users with an emphasis on immediate meetups with friends.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-wrapper">
+                    <div class="project-left">
+                        <p><strong> 🫀 OrganSafe </strong></p>
+                        <p><i>React.js, Flask, Solidity (Ethereum) </i></p>
+                    </div>
+                    <div class="project-right">
+                        <p><i>February 2022</i></p>
+                        <p><a href="https://github.com/bliutech/organ-safe"> github.com/bliutech/organ-safe </a></p>
+                    </div>
+                </div>
+                <p> 
+                    OrganSafe is a revolutionary web application that tackles the growing health & security problem of black marketing of donated organs.
+                    The verification of organ recipients leverages the Ethereum Blockchain to provide critical security and prevent improper allocation
+                    for such a pivotal resource. Users can also register on OrganSafe with their health information and desired donation and then
+                    application's algorithms will automatically match the users based on qualifying priority for available donations. Hospitals can
+                    easily track donations of organs and easily record when recipients receive their donation.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-wrapper">
+                    <div class="project-left">
+                        <p><strong> 🌈 Qwerty </strong></p>
+                        <p><i>React.js, JavaScript, Firebase </i></p>
+                    </div>
+                    <div class="project-right">
+                        <p><i>January 2022</i></p>
+                        <p><a href="https://github.com/bliutech/organ-safe"> github.com/bliutech/organ-safe </a></p>
+                    </div>
+                </div>
+                <p> 
+                    Qwerty is the first social website focused on connecting students with similar classes and gender identities. To get started simply
+                    input your information and our system will automatically connect you with other students. If there are no other students with similar
+                    gender identities only your classes will be considered in the matching system. Have fun, and good luck with studying!
                 </p>
             </div>
         </div>
