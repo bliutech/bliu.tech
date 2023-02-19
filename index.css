@@ -94,25 +94,6 @@ a {
     min-height: 50vh;
 }
 
-.box-left {
-    float:left;
-    position: static;
-    width: 40%;
-    left: 0px;
-    margin-right:20px;
-}
-
-.box-right {
-    float:right;
-    position: static;
-    width: 40%;
-    left: 50%;
-    right: 0px;
-    border: 3px;
-    border-color: black;
-    margin-left:20px;
-}
-
 .content {
     margin-top: 10%;
     margin-bottom: 10%;
@@ -143,3 +124,85 @@ a {
     padding-right: 0;
     width: 100%;
 }
+
+/* ======================================================================================================================== */
+
+/* Project Card */
+
+.project-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.project-card p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.project-card > h2,
+.project-card > p {
+    margin: 0;
+}
+
+.project-card p {
+    margin: 0.5rem 0;
+}
+
+.project-card > .project-left {
+    flex-grow: 1;
+    float: left;
+    max-width: 450px;
+}
+
+.project-card > .project-right {
+    flex-grow: 1;
+    float: right;
+    text-align: right;
+    max-width: 450px;
+}
+
+/* ======================================================================================================================== */
+
+
+/* ======================================================================================================================== */
+
+/* Experience Card */
+
+.experience-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.experience-card > p {
+    max-width: 100%;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.experience-card > h2,
+.experience-card > p {
+    margin: 0;
+}
+
+.experience-card {
+    margin: 0.5rem 0;
+}
+
+.experience-card > .experience-left {
+    flex-grow: 1;
+    float: left;
+    max-width: 450px;
+}
+
+.experience-card > .experience-right {
+    flex-grow: 1;
+    float: right;
+    text-align: right;
+    max-width: 450px;
+}
+
+/* ======================================================================================================================== */
