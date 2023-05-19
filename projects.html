@@ -10,9 +10,12 @@
 
             gtag('config', 'G-8QBFMST9CX');
         </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Projects | bliu.tech </title>
         <link rel="shortcut icon" type="image/jpg" href="./files/gear-thin.ico"/>
         <link rel="stylesheet" href="index.css" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -45,6 +48,33 @@
                 </div>
                 <p> Lorem ipsum ... </p>
             </div> -->
+
+            <div class="project-card">
+                <div class="project-wrapper">
+                    <div class="project-left">
+                        <p><strong> 🛡 Developing Robust Networks to Defend Against Adversarial Examples </strong></p>
+                        <p><i> CNNs, LSTMs, Adversarial Machine Learning </i></p>
+                    </div>
+                    <div class="project-right">
+                        <p><i>March 2023</i></p>
+                        <p><a href="https://github.com/bliutech/adversarial-networks">github.com/bliutech/adversarial-networks</a></p>
+                    </div>
+                </div>
+                <p> 
+                    An ongoing area of research involves defenses against adversarial examples, which are specifically designed inputs that attack 
+                    the model's inference. We explore the impact on adversarial examples against common deep learning classification architectures 
+                    such as CNNs and RNNs, specifically testing on a CNN and CNN-LSTM hybrid, trained on the CIFAR-10 dataset. We implemented 
+                    an efficient adversarial attack known as the Fast-Gradient Sign Method (FGSM) to generate perturbations against the baseline model. 
+                    We then developed more robust networks specifically to defend against adversarial attacks by performing data augmentation on the 
+                    original dataset with adversarial examples. We then trained our improved networks on this dataset. Our baseline models had a 80.374% 
+                    accuracy for the CNN and 79.001% for the CNN-LSTM hybrid architecture, and when attacked with adversarial examples with \(\epsilon = 0.1\), 
+                    their accuracies dropped to 9.375% and 12.679%, respectively. In comparison, our robust models trained on examples with \(\epsilon = 0.2\) 
+                    defended well against these attacks, achieving a validation accuracy of 75.488% for the CNN architecture and 74.056% for the CNN-LSTM 
+                    hybrid architecture, which is an absolute increase of 64.142% for the CNN architecture and 61.375% for the CNN-LSTM hybrid architecture, 
+                    respectively. When comparing architectures, although there were strengths to the CNN-LSTM hybrid architecture, the CNN outperformed it 
+                    in terms of accuracy and training time for adversarial examples.
+                </p>
+            </div>
 
             <div class="project-card">
                 <div class="project-wrapper">
