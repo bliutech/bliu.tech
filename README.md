@@ -17,5 +17,5 @@ npx serve
 For linting, it is recommended to install [`prettier`](https://prettier.io/docs/en/install.html) as a useful tool.
 
 ```bash
-npx prettier --write *.html *.css
+npx prettier --write *.html *.css *.js
 ```
