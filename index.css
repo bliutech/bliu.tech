@@ -162,7 +162,6 @@ footer .footer-container {
 
 .footer-container .footer-left,
 .footer-container .footer-right {
-  min-width: 37rem;
   padding: 1rem 0;
 }
 
@@ -248,6 +247,7 @@ ul.footer-contacts {
   margin: 5vh 0;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 840px) {
