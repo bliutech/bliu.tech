@@ -6,7 +6,7 @@ function toggleNav() {
 /* fixes resizing issue with hamurger menu */
 addEventListener("resize", () => {
   let ul = document.getElementById("hamburger-contents");
-  if (window.innerWidth > 840) {
+  if (window.innerWidth > 920) {
     ul.style.display = "block";
   } else {
     ul.style.display = "none";
