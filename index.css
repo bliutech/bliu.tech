@@ -120,7 +120,7 @@ nav .hamburger {
   color: rgb(255, 0, 0);
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 920px) {
   nav ul {
     margin-top: 4rem;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
