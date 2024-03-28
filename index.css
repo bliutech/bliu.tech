@@ -145,7 +145,7 @@ nav .hamburger {
   nav .hamburger {
     position: fixed;
     display: block;
-    padding: 14px 2.5rem;
+    padding: 12px 16px;
     right: 0;
     top: 0;
     z-index: 1;
