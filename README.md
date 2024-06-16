@@ -19,3 +19,9 @@ For linting, it is recommended to install [`prettier`](https://prettier.io/docs/
 ```bash
 npx prettier --write *.html *.css *.js
 ```
+
+For accessibility checks, it is recommended to install [`pa11y`](https://pa11y.org/) as a useful tool.
+
+```bash
+for file in *.html; do if ! pa11y --reporter cli $file; then echo "$file : FAILED"; break; fi; done
+```
