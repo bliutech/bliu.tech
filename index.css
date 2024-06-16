@@ -23,6 +23,10 @@ a {
   color: red;
 }
 
+ul {
+  padding-inline-start: 25px;
+}
+
 .top {
   margin-top: 6rem;
   position: static;
