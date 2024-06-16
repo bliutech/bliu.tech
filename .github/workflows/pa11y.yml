@@ -16,4 +16,14 @@ jobs:
         with:
           node-version: "18"
       - run: npm install -g pa11y
-      - run: for file in *.html; do if ! pa11y --reporter cli $file; then; break; fi; done
+      - run: >
+          for file in *.html;
+          do
+            if [[ ! $(pa11y $file) ]];
+            then
+              echo "$file : FAILED";
+              exit 1;
+            else
+              echo "$file : PASSED";
+            fi;
+          done
