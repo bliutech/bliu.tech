@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://www.bliu.tech/index.html</loc>
+        <loc>https://www.bliu.tech/index.html</loc>
     </url>
     <url>
-        <loc>http://www.bliu.tech/projects.html</loc>
+        <loc>https://www.bliu.tech/projects.html</loc>
     </url>
     <url>
-        <loc>http://www.bliu.tech/teaching.html</loc>
+        <loc>https://www.bliu.tech/teaching.html</loc>
     </url>
     <url>
-        <loc>http://www.bliu.tech/experience.html</loc>
+        <loc>https://www.bliu.tech/experience.html</loc>
     </url>
     <url>
-        <loc>http://cyber.bliu.tech/</loc>
+        <loc>https://cyber.bliu.tech/</loc>
     </url>
 </urlset>
