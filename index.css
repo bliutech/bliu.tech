@@ -51,6 +51,7 @@
 /* Global Variables */
 :root {
   --font-size-root: 18px;
+  --nav-bar-height: 4rem;
 }
 
 /* ======================================================================================================================== */
@@ -58,11 +59,8 @@
 /* Global Styling */
 
 body {
-  font-family: "Poppins", sans-serif;
-}
-
-h1,
-p {
+  margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
 }
 
@@ -76,9 +74,8 @@ ul {
 }
 
 .top {
-  margin-top: 6rem;
-  position: static;
-  min-height: 50vh;
+  margin-top: var(--nav-bar-height);
+  min-height: calc(50vh - var(--nav-bar-height));
 }
 
 .content {
@@ -86,7 +83,6 @@ ul {
   margin-bottom: 10%;
   padding-left: 20%;
   padding-right: 20%;
-  position: static;
 }
 
 @media screen and (max-width: 840px) {
@@ -101,11 +97,11 @@ ul {
 /* Navigation Bar */
 
 nav {
-  position: fixed;
-  width: 100%;
-  height: 4rem;
   left: 0;
   top: 0;
+  height: var(--nav-bar-height);
+  position: fixed;
+  width: 100%;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 4px 4px 0px #00000040;
   z-index: 1;
@@ -280,8 +276,8 @@ ul.footer-contacts {
 
 .home-container {
   width: 100%;
-  margin: 5vh 0 0 0;
-  padding: 8% 0;
+  padding: calc(((50vh - var(--nav-bar-height)) / 2) - 3vh) 0
+    calc(((50vh - var(--nav-bar-height)) / 2) + 3vh);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -308,7 +304,15 @@ ul.footer-contacts {
   flex-wrap: wrap;
 }
 
+.about {
+  padding: 0 20% 3rem;
+}
+
 @media screen and (max-width: 840px) {
+  .about {
+    padding: 0 5% 3rem;
+  }
+
   .right-content {
     text-align: center;
     width: 90%;
