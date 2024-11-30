@@ -64,6 +64,16 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+h1,
+h2 {
+  margin: 0;
+  margin-block: 0;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
 a {
   cursor: pointer;
   color: red;
@@ -75,17 +85,26 @@ ul {
 
 .top {
   margin-top: var(--nav-bar-height);
-  min-height: calc(50vh - var(--nav-bar-height));
+  min-height: calc(100vh - var(--nav-bar-height));
 }
 
 .content {
-  margin-top: 8rem;
+  /* margin-top: 6rem;
   margin-bottom: 10%;
   padding-left: 20%;
-  padding-right: 20%;
+  padding-right: 20%; */
+
+  padding: 2rem 20%;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1212px) and (min-width: 920px) {
+  .content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media screen and (max-width: 920px) {
   .content {
     padding-left: 5%;
     padding-right: 5%;
@@ -364,14 +383,35 @@ ul.footer-contacts {
 .project-wrapper > .project-left {
   flex-grow: 1;
   float: left;
-  max-width: 60%;
+  /* max-width: 60%; */
 }
 
 .project-wrapper > .project-right {
   flex-grow: 1;
   float: right;
   text-align: right;
-  max-width: 40%;
+  /* max-width: 40%; */
+}
+
+.project-link {
+  background-image: url(/files/svg/github.svg);
+  background-repeat: no-repeat;
+  padding-left: 1.75rem;
+}
+
+@media screen and (max-width: 810px) {
+  .project-wrapper > .project-left,
+  .project-wrapper > .project-right {
+    width: 100%;
+  }
+
+  .project-wrapper > .project-right p:not(.project-link) {
+    display: none;
+  }
+
+  .project-link {
+    text-align: left !important;
+  }
 }
 
 /* ======================================================================================================================== */
@@ -395,13 +435,12 @@ ul.footer-contacts {
   overflow-wrap: break-word;
 }
 
-.experience-card > h2,
-.experience-card > p {
-  margin: 0;
+.experience-card p {
+  margin-block: 0.25rem;
 }
 
 .experience-card {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0;
 }
 
 .experience-wrapper > .experience-left {
