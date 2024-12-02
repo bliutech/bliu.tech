@@ -20,6 +20,8 @@ For linting, it is recommended to install [`prettier`](https://prettier.io/docs/
 npx prettier --write *.html *.css *.js
 ```
 
+Default `prettier` has some formatting decision with regards to void HTML elements that are not desired. To fix this, we use [`prettier-plugin-void-html`](https://github.com/awmottaz/prettier-plugin-void-html) to enforce the desired formatting.
+
 For accessibility checks, it is recommended to install [`pa11y`](https://pa11y.org/) as a useful tool.
 
 ```bash
