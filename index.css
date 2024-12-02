@@ -294,32 +294,45 @@ ul.footer-contacts {
 }
 
 .home-container {
+  --home-container-height: calc(100vh - var(--nav-bar-height));
+  --content-height: 50vh;
   width: 100%;
-  padding: calc(((50vh - var(--nav-bar-height)) / 2) - 3vh) 0
-    calc(((50vh - var(--nav-bar-height)) / 2) + 3vh);
+  height: var(--home-container-height) - 2 * var(--content-height);
+  padding: calc((var(--home-container-height) - var(--content-height)) / 2) 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.home-container > .left-content,
-.home-container > .right-content {
-  max-width: 37rem;
-  padding: 1rem 0;
+.left-content,
+.right-content {
+  height: var(--content-height);
+  width: 50vw;
 }
 
 .left-content > img {
-  width: 70%;
+  --image-height: calc(var(--content-height) - 2rem);
+  --shift: -2vw;
+  width: var(--image-height);
   border-radius: 100%;
-  margin: auto;
+  margin: calc((var(--content-height) - var(--image-height)) / 2)
+    calc(((50vw - var(--image-height)) / 2) + var(--shift))
+    calc((var(--content-height) - var(--image-height)) / 2)
+    calc(((50vw - var(--image-height)) / 2) - var(--shift));
   display: block;
 }
 
+.right-content {
+  padding: 3rem 0 3rem 3rem;
+  height: calc(var(--content-height) - 2 * 3rem);
+  width: calc(50vw - 3rem);
+}
+
 .contacts-container {
-  width: 100%;
-  margin: 5vh 0;
+  width: 35vw;
+  margin: 5vh 0 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -327,28 +340,58 @@ ul.footer-contacts {
   padding: 0 20% 3rem;
 }
 
+.contacts-container > .contacts-item {
+  min-width: 10vw;
+}
+
+.contacts-item a {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts-item img {
+  width: 80%;
+}
+
 @media screen and (max-width: 840px) {
   .about {
     padding: 0 5% 3rem;
   }
 
+  .home-container {
+    padding: 5vh 0 0;
+  }
+
+  .left-content {
+    width: 100vw;
+    max-height: 80vw;
+  }
+
+  .left-content img {
+    max-width: 80vw;
+    margin: auto;
+  }
+
   .right-content {
     text-align: center;
-    width: 90%;
+    width: 80vw;
+    max-height: 45%;
+    padding: 2vh 0 5vh;
   }
 
   .right-content ul li {
     text-align: left;
     margin: 0 auto;
   }
-}
 
-.contacts-container > .contacts-item {
-  min-width: 150px;
-}
+  .contacts-container {
+    width: 80vw;
+    margin: 5vh auto 0;
+  }
 
-.contacts-item img {
-  width: 80%;
+  .contacts-container > .contacts-item {
+    min-width: 20vw;
+  }
 }
 
 /* ======================================================================================================================== */
