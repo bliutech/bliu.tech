@@ -89,11 +89,6 @@ ul {
 }
 
 .content {
-  /* margin-top: 6rem;
-  margin-bottom: 10%;
-  padding-left: 20%;
-  padding-right: 20%; */
-
   padding: 2rem 20%;
 }
 
@@ -359,7 +354,7 @@ ul.footer-contacts {
   }
 
   .home-container {
-    padding: 5vh 0 0;
+    padding: 5vh 0;
   }
 
   .left-content {
@@ -426,14 +421,12 @@ ul.footer-contacts {
 .project-wrapper > .project-left {
   flex-grow: 1;
   float: left;
-  /* max-width: 60%; */
 }
 
 .project-wrapper > .project-right {
   flex-grow: 1;
   float: right;
   text-align: right;
-  /* max-width: 40%; */
 }
 
 .project-link {
