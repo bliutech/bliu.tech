@@ -1,0 +1,4 @@
+name: "SEO Preview"
+description: |-
+  A GitHub Action that generates an image that can be used as a preview image for a website (in either the `og:image` or `twitter:image` meta tags).
+inputs:
