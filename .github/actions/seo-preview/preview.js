@@ -8,12 +8,12 @@ const puppeteer = require('puppeteer');
   // Set the viewport's width and height
   await page.setViewport({ width: 1366, height: 768 });
 
-  // Open ScrapingBee's home page
+  // Open Home Page
   await page.goto('http://localhost:3000');
 
   try {
     // Capture screenshot and save it in the current folder:
-    await page.screenshot({ path: `./bliutech_homepage.jpg` });
+    await page.screenshot({ path: `../../../files/preview.jpg` });
 
   } catch (err) {
     console.log(`Error: ${err.message}`);
