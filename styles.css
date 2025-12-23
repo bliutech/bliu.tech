@@ -113,7 +113,10 @@ hr {
 
 a {
   cursor: pointer;
-  color: var(--link);
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--link);
+  text-underline-offset: 2px;
 }
 
 ul {
@@ -351,6 +354,12 @@ ul.footer-contacts {
   display: inline;
 }
 
+/* Bold text in footer is red in dark mode */
+html.dark footer strong,
+html.dark footer b {
+  color: var(--accent);
+}
+
 .footer-container li {
   padding: 0.5rem 0;
   width: 15rem;
@@ -434,12 +443,6 @@ ul.footer-contacts {
   flex-wrap: wrap;
 }
 
-/* Make the main contact icons turn red on hover/focus */
-.contacts-container a:hover .inlined-svg,
-.contacts-container a:focus .inlined-svg {
-  color: var(--accent);
-}
-
 .contacts-container .inlined-svg {
   transition:
     color 180ms ease,
@@ -447,6 +450,11 @@ ul.footer-contacts {
 }
 .contacts-container a:hover .inlined-svg {
   transform: scale(1.06);
+}
+
+/* In dark mode, main contact icons are red by default */
+html.dark .contacts-container .inlined-svg {
+  color: var(--accent);
 }
 
 .about {
