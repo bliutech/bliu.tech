@@ -94,19 +94,26 @@
       </p>
 
       <!--
-            <div class="project-card">
-                <div class="project-wrapper">
-                    <div class="project-left">
-                        <p><strong> 📕 Project Title </strong></p>
-                        <p><i>Frameworks Used</i></p>
-                    </div>
-                    <div class="project-right">
-                        <p><i>Project Date</i></p>
-                        <p><a href="">Project Link</a></p>
-                    </div>
-                </div>
-                <p> Lorem ipsum ... </p>
-            </div> -->
+      <div class="project-card">
+          <div class="project-wrapper">
+              <div class="project-left">
+                  <p><strong> 📕 Project Title </strong></p>
+                  <p><i>Frameworks Used</i></p>
+              </div>
+              <div class="project-right">
+                  <p><i>Project Date</i></p>
+                  <p><a href="">Project Link</a></p>
+              </div>
+          </div>
+          <p>More information soon.</p>
+          <details>
+            <summary><strong>Details</strong></summary>
+            <ul>
+              <li>More information soon.</li>
+            </ul>
+          </details>
+      </div>
+      -->
 
       <div class="project-card">
         <div class="project-wrapper">
@@ -139,30 +146,41 @@
           </div>
         </div>
         <p>
-          An ongoing area of research involves defenses against adversarial
-          examples, which are specifically designed inputs that attack the
-          model's inference. We explore the impact on adversarial examples
-          against common deep learning classification architectures such as CNNs
-          and RNNs, specifically testing on a CNN and CNN-LSTM hybrid, trained
-          on the CIFAR-10 dataset. We implemented an efficient adversarial
-          attack known as the Fast-Gradient Sign Method (FGSM) to generate
-          perturbations against the baseline model. We then developed more
-          robust networks specifically to defend against adversarial attacks by
-          performing data augmentation on the original dataset with adversarial
-          examples. We then trained our improved networks on this dataset. Our
-          baseline models had a 80.374% accuracy for the CNN and 79.001% for the
-          CNN-LSTM hybrid architecture, and when attacked with adversarial
-          examples with &epsilon; = 0.1, their accuracies dropped to 9.375% and
-          12.679%, respectively. In comparison, our robust models trained on
-          examples with &epsilon; = 0.2 defended well against these attacks,
-          achieving a validation accuracy of 75.488% for the CNN architecture
-          and 74.056% for the CNN-LSTM hybrid architecture, which is an absolute
-          increase of 64.142% for the CNN architecture and 61.375% for the
-          CNN-LSTM hybrid architecture, respectively. When comparing
-          architectures, although there were strengths to the CNN-LSTM hybrid
-          architecture, the CNN outperformed it in terms of accuracy and
-          training time for adversarial examples.
+          Exploring defenses against adversarial attacks on CNN and CNN-LSTM
+          neural networks trained on CIFAR-10.
         </p>
+        <details>
+          <summary><strong>Details</strong></summary>
+          <ul>
+            <li>
+              Explored the impact of adversarial examples against common deep
+              learning classification architectures (CNNs and RNNs) using
+              CIFAR-10 dataset
+            </li>
+            <li>
+              Implemented Fast-Gradient Sign Method (FGSM) to generate
+              adversarial perturbations against baseline models
+            </li>
+            <li>
+              Developed robust networks using data augmentation with adversarial
+              examples to defend against attacks
+            </li>
+            <li>
+              Baseline models achieved 80.374% accuracy (CNN) and 79.001%
+              (CNN-LSTM), but dropped to 9.375% and 12.679% respectively when
+              attacked with adversarial examples (&epsilon; = 0.1)
+            </li>
+            <li>
+              Robust models trained on &epsilon; = 0.2 examples achieved 75.488%
+              (CNN) and 74.056% (CNN-LSTM) validation accuracy under attack - an
+              absolute increase of 64.142% and 61.375% respectively
+            </li>
+            <li>
+              Found that CNN architecture outperformed CNN-LSTM hybrid in both
+              accuracy and training time for adversarial examples
+            </li>
+          </ul>
+        </details>
       </div>
 
       <div class="project-card">
@@ -194,26 +212,40 @@
           </div>
         </div>
         <p>
-          The threat presented by malware hidden in Portable Document Formats
-          (PDFs) is a serious issue to the average Internet user, with the
-          ability of a PDF to execute purposefully-embedded JavaScript serving
-          as a method of obscuring malicious scripts and data. While there are
-          several existing Machine Learning-based models designed for PDF
-          malware detection, the usage of transformers to statically analyze
-          PDFs for malware has not yet been explored. Due to their attention
-          mechanisms and ability to process data in parallel, transformers hold
-          great potential for analyzing large quantities of data in detail
-          without being excessively computationally demanding. By preprocessing
-          PDFs as byte strings, generating meaningful word embeddings using
-          one-hot encoding and variable n-grams, and feeding these results to a
-          fine-tuned transformer model, we have produced a model that classifies
-          a testing set of PDFs as malicious or benign with 96.67% accuracy.
-          After evaluating the performance of our model, we can note that this
-          is a feasible method of performing robust static analysis on PDF
-          files. However, it is important to continue refining the current model
-          and exploring additional methods of improving the accuracy and
-          precision of the model on a varied dataset.
+          Static analysis technique for detecting malware in PDF files using
+          natural language processing (NLP) techniques and transformer-based
+          machine learning models, achieving 96.67% classification accuracy.
         </p>
+        <details>
+          <summary><strong>Details</strong></summary>
+          <ul>
+            <li>
+              Addressed the threat of malware hidden in PDFs through
+              purposefully-embedded JavaScript
+            </li>
+            <li>
+              First exploration of using transformers for static PDF malware
+              analysis, leveraging their attention mechanisms and parallel
+              processing capabilities
+            </li>
+            <li>
+              Preprocessed PDFs as byte strings and generated word embeddings
+              using one-hot encoding and variable n-grams
+            </li>
+            <li>
+              Fine-tuned transformer model to classify PDFs as malicious or
+              benign with 96.67% accuracy on testing set
+            </li>
+            <li>
+              Demonstrated feasibility of transformer-based static analysis for
+              PDF malware detection
+            </li>
+            <li>
+              Identified opportunities for further refinement and improved
+              precision on varied datasets
+            </li>
+          </ul>
+        </details>
       </div>
 
       <div class="project-card">
@@ -245,19 +277,37 @@
           </div>
         </div>
         <p>
-          Wikisafe is a revolutionary new crowdsourcing web application that
-          innovates the process of crowdsourcing information. This application
-          leverages the Ethereum blockchain to validate contributions to
-          crowdsourced articles and prevents vandalism to these vital resources.
-          Additionally, Wikisafe provides several fidelity machine learning
-          models that seek to improve the overall contributor experience through
-          automating parts of the process such as summarization, captioning, and
-          figure generation. Contributors can start simply by signing up for an
-          account and begin contributing and utilizing the features. Communities
-          are able to collectively share knowledge and improve free and
-          accessible education globally around the world with incredible ease,
-          security, and quality!
+          HackMIT 2022. 🏆
+          <strong>2nd Place in Blockchain for Society</strong> (sponsored by
+          Jump Crypto). Blockchain-based crowdsourcing platform that uses
+          Ethereum to validate article contributions and prevent vandalism while
+          enhancing collaboration with ML features.
         </p>
+        <details>
+          <summary><strong>Details</strong></summary>
+          <ul>
+            <li>
+              Leverages Ethereum blockchain to validate contributions to
+              crowdsourced articles and prevent vandalism
+            </li>
+            <li>
+              Provides machine learning models to automate summarization,
+              captioning, and figure generation
+            </li>
+            <li>
+              Improves overall contributor experience through intelligent
+              automation
+            </li>
+            <li>
+              Simple account-based system for contributors to start sharing
+              knowledge
+            </li>
+            <li>
+              Enables communities to collectively improve free and accessible
+              education globally with enhanced security and quality
+            </li>
+          </ul>
+        </details>
       </div>
 
       <div class="project-card">
@@ -287,13 +337,34 @@
           </div>
         </div>
         <p>
-          Ever finish your cup of boba and wonder, can I recycle this or not?
-          Introducing Re, an interactive web app that lets you take a photo of
-          your trash and tells you which bin it belongs to! To begin, register
-          an account on the site, and start taking photos! Re tracks the number
-          of trash items you have scanned, and it features a global leaderboard
-          of users who scan the most trash.
+          LA Hacks 2022. Interactive web application that uses computer vision
+          to identify trash items and determine which recycling bin they belong
+          to.
         </p>
+        <details>
+          <summary><strong>Details</strong></summary>
+          <ul>
+            <li>
+              Photo-based trash classification system that identifies the
+              correct recycling bin for waste items
+            </li>
+            <li>
+              Built with React.js frontend and Flask backend powered by PyTorch
+              computer vision models
+            </li>
+            <li>
+              User account system to track recycling activity and scanning
+              history
+            </li>
+            <li>
+              Global leaderboard featuring users who scan the most trash items
+            </li>
+            <li>
+              Gamifies recycling to encourage environmentally responsible
+              behavior
+            </li>
+          </ul>
+        </details>
       </div>
 
       <div class="project-card">
@@ -325,16 +396,40 @@
           </div>
         </div>
         <p>
-          OrganSafe is a revolutionary web application that tackles the growing
-          health & security problem of black marketing of donated organs. The
-          verification of organ recipients leverages the Ethereum Blockchain to
-          provide critical security and prevent improper allocation for such a
-          pivotal resource. Users can also register on OrganSafe with their
-          health information and desired donation and then application's
-          algorithms will automatically match the users based on qualifying
-          priority for available donations. Hospitals can easily track donations
-          of organs and easily record when recipients receive their donation.
+          TreeHacks 2022. 🏆 <strong>Grand Prize in Healthcare Winner</strong>.
+          Blockchain-based organ donation platform that uses Ethereum to prevent
+          black market trafficking and ensure secure, fair allocation of donated
+          organs.
         </p>
+        <details>
+          <summary><strong>Details</strong></summary>
+          <ul>
+            <li>
+              Tackles the growing health and security problem of black market
+              organ trafficking
+            </li>
+            <li>
+              Leverages Ethereum blockchain to verify organ recipients and
+              prevent improper allocation
+            </li>
+            <li>
+              User registration system for donors to input health information
+              and donation preferences
+            </li>
+            <li>
+              Automated matching algorithms to prioritize and allocate available
+              donations fairly
+            </li>
+            <li>
+              Hospital tracking system to monitor organ donations and record
+              when recipients receive transplants
+            </li>
+            <li>
+              Provides critical security for one of healthcare's most vital
+              resources
+            </li>
+          </ul>
+        </details>
       </div>
     </div>
 

@@ -536,35 +536,34 @@ ul.footer-contacts {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 0.5rem 0 0;
 }
 
 .project-wrapper {
   width: 100%;
 }
 
-.project-card p {
+.project-card > p {
   max-width: 100%;
+  width: 100%;
   overflow-wrap: break-word;
 }
 
-.project-card > h2,
-.project-card > p {
-  margin: 0;
-}
-
 .project-card p {
-  margin: 0.5rem 0;
+  margin-block: 0.25rem;
 }
 
 .project-wrapper > .project-left {
   flex-grow: 1;
   float: left;
+  max-width: 52%;
 }
 
 .project-wrapper > .project-right {
   flex-grow: 1;
   float: right;
   text-align: right;
+  max-width: 45%;
 }
 
 .project-link {
