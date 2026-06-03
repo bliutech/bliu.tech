@@ -56,6 +56,10 @@
 :root {
   --font-size-root: 18px;
   --nav-bar-height: 4rem;
+  /* Full emoji nav ~1050px wide; collapse before links compress (px avoids mq rem quirks) */
+  --bp-nav-collapse: 1100px;
+  /* Stack before two 50% cols + center inset squeeze the heading */
+  --bp-hero-stack: 1024px;
 }
 
 /* Color variables */
@@ -80,6 +84,10 @@
 /* ======================================================================================================================== */
 
 /* Global Styling */
+
+html {
+  font-size: var(--font-size-root);
+}
 
 body {
   margin: 0;
@@ -139,6 +147,8 @@ ul {
 /* Navigation Bar */
 
 nav {
+  --nav-icon-size: 2.25rem;
+  --nav-touch-padding: 1rem;
   left: 0;
   top: 0;
   height: var(--nav-bar-height);
@@ -147,31 +157,40 @@ nav {
   background-color: var(--nav-bg);
   box-shadow: 0px 4px 4px 0px var(--shadow);
   z-index: 1;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 nav ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 0;
-  float: right;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  justify-content: flex-end;
 }
 
-/* https://stackoverflow.com/questions/20920265/horizontal-menu-how-to-float-right-but-keep-the-menu-items-in-the-correct-order */
 nav ul li {
-  float: left;
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 nav ul li a {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
-  position: sticky;
-  display: block;
+  display: flex;
+  align-items: center;
+  height: var(--nav-bar-height);
   color: var(--nav-text);
   text-align: center;
-  padding: 14px 16px;
+  padding: 0 var(--nav-touch-padding);
   text-decoration: none;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -180,6 +199,10 @@ nav ul li a:hover {
 
 nav .hamburger {
   display: none;
+}
+
+nav svg.hamburger {
+  flex-shrink: 0;
 }
 
 /* Hamburger animation: morph three bars into an X when `.open` is present */
@@ -208,15 +231,20 @@ nav .hamburger {
 }
 
 .logo-li {
-  position: absolute;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  order: -1;
   z-index: 1;
-  top: 0;
-  left: 0;
-  padding: 14px 16px;
+  padding: 0 var(--nav-touch-padding);
+  height: var(--nav-bar-height);
+  box-sizing: border-box;
 }
 
 .logo-li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -235,14 +263,26 @@ nav .hamburger {
   color: var(--accent);
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (min-width: 1101px) {
+  nav svg.hamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1100px) {
   nav ul {
-    margin-top: 4rem;
+    margin: 0;
+    flex: none;
+    justify-content: stretch;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     display: none;
     box-shadow: 0px 4px 4px 0px var(--shadow);
     position: fixed;
+    top: var(--nav-bar-height);
+    left: 0;
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   nav ul li,
@@ -251,20 +291,21 @@ nav .hamburger {
     background-color: var(--nav-bg);
   }
 
-  .logo-li,
-  .logo-li a,
-  .logo-text {
-    display: inline-block;
+  nav ul li a {
+    justify-content: center;
+    height: auto;
+    padding: 0.875rem var(--nav-touch-padding);
   }
 
-  nav .hamburger {
-    position: fixed;
+  nav svg.hamburger {
     display: block;
-    padding: 12px 16px;
-    right: 0;
-    top: 0;
-    z-index: 1;
+    align-self: center;
+    /* viewBox 100×80 — icon scales with root font; bar stays vertically centered in nav */
+    width: calc(var(--nav-icon-size) * 1.25);
+    height: var(--nav-icon-size);
+    margin: 0 var(--nav-touch-padding) 0 auto;
     cursor: pointer;
+    box-sizing: border-box;
   }
 
   nav svg.hamburger:hover rect {
@@ -344,11 +385,6 @@ ul.footer-contacts {
 
 /* Home Page */
 
-.text {
-  margin-top: 5%;
-  vertical-align: middle;
-}
-
 #highlight {
   color: var(--text);
   text-decoration-color: var(--accent);
@@ -357,46 +393,75 @@ ul.footer-contacts {
 }
 
 .home-container {
-  --home-container-height: calc(100vh - var(--nav-bar-height));
-  --content-height: 50vh;
+  --hero-max-width: 72rem;
+  --hero-inline-padding: clamp(1.25rem, 5vw, 4rem);
+  --hero-column-gap: clamp(1.5rem, 3vw, 5rem);
+  --hero-center-inset: clamp(1rem, 3vw, 2.5rem);
+  --hero-stack-gap: clamp(2rem, 5vh, 3.5rem);
+  --hero-photo-size: min(24rem, 48vmin, 100%);
+  --hero-min-height: calc(100vh - var(--nav-bar-height));
+  box-sizing: border-box;
   width: 100%;
-  height: auto;
-  padding: calc((var(--home-container-height) - var(--content-height)) / 2) 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  max-width: var(--hero-max-width);
+  min-height: var(--hero-min-height);
+  margin-inline: auto;
+  padding: clamp(2rem, 6vh, 4rem) var(--hero-inline-padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: var(--hero-column-gap);
 }
 
-.left-content,
-.right-content {
-  height: var(--content-height);
-  width: 50vw;
+@media screen and (min-width: 1101px) {
+  .home-container {
+    --hero-column-gap: clamp(3rem, 6vw, 7rem);
+  }
+}
+
+@supports (height: 100dvh) {
+  .home-container {
+    --hero-min-height: calc(100dvh - var(--nav-bar-height));
+  }
+}
+
+.left-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 0;
+  padding-right: var(--hero-center-inset);
 }
 
 .left-content > img {
-  --image-height: calc(var(--content-height) - 2rem);
-  --shift: -2vw;
-  width: var(--image-height);
-  border-radius: 100%;
-  margin: calc((var(--content-height) - var(--image-height)) / 2)
-    calc(((50vw - var(--image-height)) / 2) + var(--shift))
-    calc((var(--content-height) - var(--image-height)) / 2)
-    calc(((50vw - var(--image-height)) / 2) - var(--shift));
+  width: var(--hero-photo-size);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
   display: block;
 }
 
 .right-content {
-  padding: 3rem 0 3rem 3rem;
-  height: calc(var(--content-height) - 6rem);
-  width: calc(50vw - 3rem);
+  min-width: 0;
+  max-width: 100%;
+  padding-left: var(--hero-center-inset);
+  overflow-wrap: break-word;
+}
+
+.right-content p {
+  text-wrap: balance;
+}
+
+.right-content h1 {
+  margin-bottom: 0.5rem;
 }
 
 .contacts-container {
-  width: 35vw;
-  margin: 5vh 0 0;
+  width: min(100%, 22rem);
+  margin-top: clamp(1.25rem, 4vh, 2.5rem);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 0.75rem 1rem;
 }
 
 .contacts-container .inlined-svg {
@@ -415,7 +480,8 @@ ul.footer-contacts {
 }
 
 .contacts-container > .contacts-item {
-  min-width: 10vw;
+  flex: 1 1 4.5rem;
+  min-width: 0;
 }
 
 .contacts-item a {
@@ -437,31 +503,7 @@ ul.footer-contacts {
   color: var(--text);
 }
 
-/* Move SVG presentation styles out of inline attributes into CSS */
-.inlined-svg g {
-  stroke: none;
-  stroke-width: 0;
-  stroke-dasharray: none;
-  stroke-linecap: butt;
-  stroke-linejoin: miter;
-  stroke-miterlimit: 10;
-  fill: none;
-  fill-rule: nonzero;
-  opacity: 1;
-}
-
-.inlined-svg path {
-  stroke: none;
-  stroke-width: 1;
-  stroke-dasharray: none;
-  stroke-linejoin: miter;
-  stroke-miterlimit: 10;
-  fill: currentColor;
-  fill-rule: nonzero;
-  opacity: 1;
-}
-
-/* Moved inline SVG styles (previously embedded in `style="..."` on <g> and <path>) */
+/* SVG presentation (moved out of inline attributes) */
 .inlined-svg g {
   stroke: none;
   stroke-width: 0;
@@ -486,44 +528,37 @@ ul.footer-contacts {
   opacity: 1;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1024px) {
   .about {
     padding: 0 5% 3rem;
   }
 
+  /* Stacked hero (viewport tracks hero width until --hero-max-width) */
   .home-container {
-    padding: 5vh 0;
+    --hero-photo-size: min(20rem, 78vw);
+    grid-template-columns: 1fr;
+    row-gap: var(--hero-stack-gap);
+    min-height: auto;
+    padding-block: clamp(2rem, 8vh, 4rem);
   }
 
   .left-content {
-    width: 100vw;
-    max-height: 80vw;
-  }
-
-  .left-content img {
-    max-width: 80vw;
-    margin: auto;
+    justify-content: center;
+    padding-right: 0;
   }
 
   .right-content {
     text-align: center;
-    width: 80vw;
-    max-height: 45%;
-    padding: 2vh 0 5vh;
+    padding-left: 0;
   }
 
-  .right-content ul li {
+  .right-content ul {
+    display: inline-block;
     text-align: left;
-    margin: 0 auto;
   }
 
   .contacts-container {
-    width: 80vw;
-    margin: 5vh auto 0;
-  }
-
-  .contacts-container > .contacts-item {
-    min-width: 20vw;
+    margin-inline: auto;
   }
 }
 

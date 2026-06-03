@@ -1,28 +1,30 @@
+/* Keep in sync with --bp-nav-collapse in styles.css */
+const navCollapseMq = window.matchMedia("(max-width: 1100px)");
+
 function toggleNav() {
   let ul = document.getElementById("hamburger-contents");
-  ul.style.display = ul.style.display === "block" ? "none" : "block";
-  // animate hamburger into an X by toggling the `open` class
+  if (!navCollapseMq.matches) return;
+  const open = ul.style.display === "flex";
+  ul.style.display = open ? "none" : "flex";
   try {
     const ham = document.querySelector("svg.hamburger");
-    if (ham) ham.classList.toggle("open");
+    if (ham) ham.classList.toggle("open", !open);
   } catch (e) {}
 }
 
-/* fixes resizing issue with hamurger menu */
-addEventListener("resize", () => {
+function syncNavMenuDisplay() {
   let ul = document.getElementById("hamburger-contents");
-  if (window.innerWidth > 920) {
-    ul.style.display = "block";
-  } else {
+  if (!ul) return;
+  if (!navCollapseMq.matches) {
+    ul.style.removeProperty("display");
+    try {
+      document.querySelector("svg.hamburger")?.classList.remove("open");
+    } catch (e) {}
+  } else if (ul.style.display !== "flex") {
     ul.style.display = "none";
   }
-});
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Ensure hamburger menu initial state
-  let ul = document.getElementById("hamburger-contents");
-  if (ul) {
-    if (window.innerWidth > 920) ul.style.display = "block";
-    else ul.style.display = "none";
-  }
-});
+navCollapseMq.addEventListener("change", syncNavMenuDisplay);
+addEventListener("resize", syncNavMenuDisplay);
+document.addEventListener("DOMContentLoaded", syncNavMenuDisplay);
